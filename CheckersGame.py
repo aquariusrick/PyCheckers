@@ -172,7 +172,7 @@ class Checkers(object):
         origin = moves[0]
         piece = self.board.get_piece(origin)
 
-        if piece.player == CheckerBoard.EmptySpace:
+        if piece == CheckerBoard.EmptySpace:
             raise InvalidCheckerMoveException("No player at that space!")
 
         if piece.player == self.opposite_player():
